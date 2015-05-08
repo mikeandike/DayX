@@ -10,6 +10,7 @@
 
 @interface DetailViewController () 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -19,11 +20,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+- (IBAction)clearButtonTapped:(id)sender {
+    self.textField.text = @"";
+    self.textView.text = @"";
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
