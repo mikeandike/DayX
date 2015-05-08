@@ -16,7 +16,7 @@ static NSString *cellID = @"entryCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Entry %ld" , indexPath.row + 1];
+    cell.textLabel.text = [NSString stringWithFormat:@"Entry %ld" , indexPath.row];
     
     return cell;
 }
