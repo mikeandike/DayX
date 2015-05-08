@@ -13,9 +13,8 @@ static NSString *cellID = @"entryCell";
 @implementation ListTableViewDataSource
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
-    cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
     cell.textLabel.text = [NSString stringWithFormat:@"Entry %ld" , indexPath.row + 1];
     
