@@ -7,9 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Entry.h"
 
 @interface EntryController : NSObject
 
 @property (strong, nonatomic, readonly) NSArray *allEntries;
+
++ (EntryController *)sharedInstance;
+- (void)addEntry:(Entry *)entry;
+- (void)removeEntry:(Entry *)entry;
+- (Entry *)createEntryWithTitle:(NSString *)title andText:(NSString *)body;
+
 
 @end

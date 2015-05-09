@@ -19,19 +19,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self updateWithEntry:self.entry];
 }
+
 - (IBAction)clearButtonTapped:(id)sender {
     self.textField.text = @"";
     self.textView.text = @"";
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)saveButtonTapped:(id)sender {
+    self.entry = [[EntryController sharedInstance] createEntryWithTitle:self.textField.text andText:self.textView.text];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
-
+-(void)updateWithEntry:(Entry *)entry{
+    self.textField.text = entry.title;
+    self.textView.text = entry.bodyText;
+}
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];

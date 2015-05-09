@@ -16,13 +16,13 @@ static NSString *cellID = @"entryCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Entry %ld" , indexPath.row];
+    cell.textLabel.text = [EntryController sharedInstance].allEntries[indexPath.row];
     
     return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return [EntryController sharedInstance].allEntries.count;
 }
 
 

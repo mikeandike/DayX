@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Entry.h"
+#import "EntryController.h"
 
 @interface DetailViewController : UIViewController <UITextFieldDelegate>
 
+@property (strong, nonatomic) Entry* entry;
+
 - (IBAction)clearButtonTapped:(id)sender;
+- (void)updateWithEntry:(Entry *)entry;
+
 
 @end

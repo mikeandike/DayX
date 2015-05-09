@@ -45,6 +45,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Ady-HI-Pap" id="eI2-QW-ltN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <customObject id="4tl-jQ-JIh" customClass="ListTableViewDataSource"/>
@@ -103,6 +106,13 @@
                             <constraint firstItem="IZ7-ff-GM7" firstAttribute="top" secondItem="reS-jl-PSo" secondAttribute="bottom" constant="46" id="jED-Fl-KI4"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="KXS-ve-MDt">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="0Vj-bg-9Xn">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="8KI-zk-TsQ" id="6dq-WE-KPF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="textField" destination="RsA-if-sbx" id="V3f-Z9-kie"/>
                         <outlet property="textView" destination="reS-jl-PSo" id="v9x-Q7-PXw"/>
